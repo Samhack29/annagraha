@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+
+<meta name="description" content="Ecommerce app template description can be written">
+<meta name="keywords" content="Ecommerce, e-auction, e-commerce, online shopping">
+<meta name=”theme-color” content=”#0d6efd>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Annagraha</title>
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+<!-- custom style -->
+<link href="css/ui.css" rel="stylesheet" type="text/css"/>
+
+<!-- Fonticon -->
+<link href="fonts/material-icon/css/round.css" rel="stylesheet" type="text/css" />
+
+     <style>
+        /* CSS comes here */
+        #video {
+            border: 1px solid black;
+            width: 250px;
+            height: 360px;
+        }
+
+        #photo {
+            border: 1px solid black;
+            width: 320px;
+            height: 240px;
+        }
+
+        #canvas {
+            display: none;
+        }
+
+        .camera {
+            width: 250px;
+            display: inline-block;
+        }
+
+        .output {
+            width: 250px;
+            display: inline-block;
+        }
+
+        #startbutton {
+            display: block;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            bottom: 36px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 100px;
+        }
+
+        .contentarea {
+            font-size: 16px;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .scrolling-wrapper {
+            overflow-x: auto;
+        }
+
+
+        .card-block {
+            height: 100px;
+            background-color: #fff;
+            border: none;
+            background-position: center;
+            background-size: cover;
+            transition: all 0.2s ease-in-out !important;
+            border-radius: 24px;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: none;
+                opacity: 0.9;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+
+<!-- Preloader-->
+<div class="preloader" id="preloader">
+    <div class="spinner-grow" role="status">
+	  <span class="visually-hidden">Loading...</span>
+	</div>
+</div>
+<!-- Preloader //end -->
+
+
+<header class="app-header onlight fixed-top">
+
+	<a href="#offcanvas_left_123" data-bs-toggle="offcanvas" role="button" class="btn-header">
+		<i class="material-icons md-menu"></i>
+	</a>
+
+	<h5 class="title-header">  AnnaGraha  </h5>
+
+	<a href="27.page-profile.html" class="btn-header">
+		<i class="material-icons md-account_circle"></i>
+ 	</a>
+
+</header> <!-- app-header.// -->
+
+<main class="app-content">
+
+
+     <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-12 col-md-9">
+                            <div class="card shadow-sm my-5">
+                                <div class="card-body p-0">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="login-form">
+                                                <div class="text-center">
+                                                    <div class="contentarea">
+                                                        <br>
+
+                                                        <div class="camera">
+                                                            <video id="video">Capturing Image Stopped!!!</video>
+                                                        </div>
+
+                                                        <div class="text-center">
+                                                            <button class="btn btn-primary" onclick="myFunction_cam()" style="border-radius:100px;"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" fill="currentColor"
+                                                                    class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                                    <path
+                                                                        d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
+                                                                </svg></button>
+                                                        </div>
+
+                                                        <canvas id="canvas"></canvas>
+                                                    </div>
+<br>
+                                                        <div id="myDIV2" class="text-center col-lg-12" style="color:red;">
+    <h6>BLACK ROT</h6>
+    <p style="color:black;">Disease detected!</p>
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+</main> <!-- app-content.// -->
+
+<nav class="nav-bottom">
+	<a href="homepage.html" class="nav-link">
+		<i class="icon material-icons md-home"></i><span class="text">Home</span>
+	</a>
+	<a href="resource.html" class="nav-link">
+		<i class="icon material-icons md-apps"></i><span class="text">Resource</span>
+	</a>
+	<a href="cart.html" class="nav-link">
+		<i class="icon material-icons md-shopping_cart"></i><span class="text">My cart</span>
+	</a>
+	<a href="learning.html" class="nav-link">
+		<i class="icon material-icons md-favorite"></i><span class="text">Learning Zone</span>
+	</a>
+</nav> <!-- nav-bottom -->
+
+  <script>
+        var img_count = 0;
+        (function () {
+
+            var width = 320; // We will scale the photo width to this
+            var height = 0; // This will be computed based on the input stream
+
+            var streaming = false;
+
+            var video = null;
+            var canvas = null;
+            var photo = null;
+            var startbutton = null;
+
+            function startup() {
+                video = document.getElementById('video');
+                canvas = document.getElementById('canvas');
+                photo = document.getElementById('photo');
+				startbutton = document.getElementById('startbutton');
+
+                navigator.mediaDevices.getUserMedia({
+                        video: {facingMode: {exact: "environment"}},
+                        audio: false
+                    })
+                    .then(function (stream) {
+                        video.srcObject = stream;
+                        video.play();
+                    })
+                    .catch(function (err) {
+                        console.log("An error occurred: " + err);
+                    });
+
+                video.addEventListener('canplay', function (ev) {
+                    if (!streaming) {
+                        height = video.videoHeight / (video.videoWidth / width);
+
+                        if (isNaN(height)) {
+                            height = width / (4 / 3);
+                        }
+
+                        video.setAttribute('width', width);
+                        video.setAttribute('height', height);
+                        canvas.setAttribute('width', width);
+                        canvas.setAttribute('height', height);
+                        streaming = true;
+                    }
+                }, false);
+
+                startbutton.addEventListener('click', function (ev) {
+                    takepicture();
+                    ev.preventDefault();
+                }, false);
+
+                clearphoto();
+            }
+
+
+            function clearphoto() {
+                var context = canvas.getContext('2d');
+                context.fillStyle = "#AAA";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                var data = canvas.toDataURL('image/png');
+                photo.setAttribute('src', data);
+
+            }
+
+            function takepicture() {
+                var context = canvas.getContext('2d');
+                if (width && height) {
+                    canvas.width = width;
+                    canvas.height = height;
+                    context.drawImage(video, 0, 0, width, height);
+
+                    var data = canvas.toDataURL('image/png');
+                    photo.setAttribute('src', data);
+
+					var divmain = document.getElementById('maindiv');
+					var img = document.createElement('img');
+					img.setAttribute('src', data);
+					img.setAttribute('class',"rounded img-fluid");
+					var divgp = document.createElement("div");
+					divgp.setAttribute('class',"col-5");
+					var divp = document.createElement("div");
+					divp.setAttribute('class',"card");
+
+					divp.appendChild(img);
+					divgp.appendChild(divp);
+					divmain.appendChild(divgp);
+
+					form_div = document.getElementById('img_form');
+
+                    var imgfield = document.createElement('input');
+                    imgfield.setAttribute('type',"hidden");
+                    imgfield.setAttribute('value', data);
+                    imgfield.setAttribute('files', data);
+                    imgfield.id = 'img_' + img_count;
+                    imgfield.setAttribute('name', imgfield.id);
+                    form_div.appendChild(imgfield);
+                    img_count = img_count+1;
+                    document.getElementById('no_img').value = img_count;
+
+                } else {
+                    clearphoto();
+                }
+            }
+
+            window.addEventListener('load', startup, false);
+        })();
+    </script>
+
+<script>
+function myFunction_cam() {
+  var x = document.getElementById("myDIV2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+var x = document.getElementById("myDIV2");
+x.style.display = "none";
+</script>
+ <script src="js/jquery-3.5.0.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap 5 JS -->
+<script src="js/bootstrap.bundle.js" type="text/javascript"></script>
+
+<!-- custom javascript -->
+<script src="js/script.js" type="text/javascript"></script>
+
+<!-- PWA -->
+<script src="js/pwa.js"></script>
+
+</body>
+</html>
